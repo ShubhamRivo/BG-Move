@@ -1,0 +1,6 @@
+{
+  "name": "BG Move Tools — Background Remover, Converter, Resizer & Compressor",
+  "description": "All-in-one free online image utility to remove backgrounds with AI, convert JPG/PNG/WEBP formats, resize dimensions with locked aspect ratio, and compress MB to KB.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

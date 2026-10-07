@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Checkerboard transparency pattern */
+  .bg-checkerboard {
+    background-color: #ffffff;
+    background-image: 
+      linear-gradient(45deg, #e2e8f0 25%, transparent 25%), 
+      linear-gradient(-45deg, #e2e8f0 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #e2e8f0 75%), 
+      linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+
+  .dark .bg-checkerboard {
+    background-color: #0f172a;
+    background-image: 
+      linear-gradient(45deg, #1e293b 25%, transparent 25%), 
+      linear-gradient(-45deg, #1e293b 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #1e293b 75%), 
+      linear-gradient(-45deg, transparent 75%, #1e293b 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+
+  .bg-checkerboard-sm {
+    background-color: #ffffff;
+    background-image: 
+      linear-gradient(45deg, #cbd5e1 25%, transparent 25%), 
+      linear-gradient(-45deg, #cbd5e1 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #cbd5e1 75%), 
+      linear-gradient(-45deg, transparent 75%, #cbd5e1 75%);
+    background-size: 12px 12px;
+    background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
+  }
+
+  .dark .bg-checkerboard-sm {
+    background-color: #0f172a;
+    background-image: 
+      linear-gradient(45deg, #334155 25%, transparent 25%), 
+      linear-gradient(-45deg, #334155 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #334155 75%), 
+      linear-gradient(-45deg, transparent 75%, #334155 75%);
+    background-size: 12px 12px;
+    background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Smooth drag pulse */
+@keyframes pulse-border {
+  0%, 100% { border-color: rgb(99 102 241); }
+  50% { border-color: rgb(168 85 247); }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2s infinite ease-in-out;
+}
